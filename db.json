@@ -1,0 +1,173 @@
+{
+    "books": [
+      {
+        "id": 1,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "genre": "Classic",
+        "year": 1925,
+        "available": true,
+        "description": "A novel set in the Jazz Age that explores themes of wealth, love, and the American Dream.",
+        "cover_image": "https://i.pinimg.com/1200x/73/e8/28/73e8285218a3526ed331c02a4b65c411.jpg",
+        "rating": 4.5,
+        "units_sold": 25000000
+      },
+      {
+        "id": 2,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "genre": "Fiction",
+        "year": 1960,
+        "available": false,
+        "description": "A Pulitzer Prize-winning novel about racial injustice and childhood innocence in the American South.",
+        "cover_image": "https://i.pinimg.com/1200x/37/05/bc/3705bc85fda7bf4d3d6957cbee610654.jpg",
+        "rating": 4.8,
+        "units_sold": 40000000
+      },
+      {
+        "id": 3,
+        "title": "1984",
+        "author": "George Orwell",
+        "genre": "Dystopian",
+        "year": 1949,
+        "available": true,
+        "description": "A chilling prophecy about a totalitarian future ruled by surveillance and censorship.",
+        "cover_image": "https://i.pinimg.com/1200x/d1/35/7a/d1357a15bdb53e7184346a44374d5696.jpg",
+        "rating": 4.7,
+        "units_sold": 30000000
+      },
+      {
+        "id": 4,
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "genre": "Classic",
+        "year": 1951,
+        "available": true,
+        "description": "A rebellious teenager narrates his experiences as he struggles with society and adulthood.",
+        "cover_image": "https://m.media-amazon.com/images/I/81OthjkJBuL._AC_UF1000,1000_QL80_.jpg",
+        "rating": 4.3,
+        "units_sold": 65000000
+      },
+      {
+        "id": 5,
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "genre": "Fantasy",
+        "year": 1937,
+        "available": false,
+        "description": "A classic fantasy adventure of Bilbo Baggins on his quest to reclaim treasure from a dragon.",
+        "cover_image": "https://m.media-amazon.com/images/I/91b0C2YNSrL._AC_UF1000,1000_QL80_.jpg",
+        "rating": 4.9,
+        "units_sold": 100000000
+      },
+      {
+        "id": 6,
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "genre": "Romance",
+        "year": 1813,
+        "available": true,
+        "description": "A timeless romance novel about love, class, and misunderstandings in 19th-century England.",
+        "cover_image": "https://i.pinimg.com/1200x/05/19/a2/0519a2f120120fb94110f9b35d740f34.jpg",
+        "rating": 4.6,
+        "units_sold": 20000000
+      },
+      {
+        "id": 7,
+        "title": "Moby-Dick",
+        "author": "Herman Melville",
+        "genre": "Adventure",
+        "year": 1851,
+        "available": false,
+        "description": "A thrilling tale of obsession and revenge between a whaler and a giant white whale.",
+        "cover_image": "https://i.pinimg.com/1200x/0c/5a/e2/0c5ae28af37b4b9988725ee72f946709.jpg",
+        "rating": 4.2,
+        "units_sold": 5000000
+      },
+      {
+        "id": 8,
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "genre": "Philosophy",
+        "year": 1988,
+        "available": true,
+        "description": "A philosophical novel about a shepherd’s journey to find his personal legend.",
+        "cover_image": "https://m.media-amazon.com/images/I/71aFt4+OTOL._AC_UF1000,1000_QL80_.jpg",
+        "rating": 4.7,
+        "units_sold": 65000000
+      },
+      {
+        "id": 9,
+        "title": "War and Peace",
+        "author": "Leo Tolstoy",
+        "genre": "Historical",
+        "year": 1869,
+        "available": false,
+        "description": "A grand historical novel covering Napoleon’s invasion of Russia and its impact on society.",
+        "cover_image": "https://i.pinimg.com/1200x/92/68/57/92685771c985f915dd35096647e13cf9.jpg",
+        "rating": 4.8,
+        "units_sold": 36000000
+      },
+      {
+        "id": 10,
+        "title": "Harry Potter",
+        "author": "J.K. Rowling",
+        "genre": "Fantasy",
+        "year": 1997,
+        "available": true,
+        "description": "The first book in the magical Harry Potter series, following the young wizard’s adventures.",
+        "cover_image": "https://i.pinimg.com/1200x/19/b9/ee/19b9ee52d7dfdef948ac5239498315ae.jpg",
+        "rating": 4.9,
+        "units_sold": 120000000
+      },
+      {
+        "id": 11,
+        "title": "Jane Eyre",
+        "author": "Charlotte Brontë",
+        "genre": "Classic",
+        "year": 1847,
+        "available": true,
+        "description": "An orphaned governess overcomes hardships to find love and independence.",
+        "cover_image": "https://i.pinimg.com/1200x/69/fc/91/69fc91d1700d3051389deb390e5ce01e.jpg",
+        "rating": 4.5,
+        "units_sold": 15000000
+      },
+      {
+        "id": 12,
+        "title": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "genre": "Philosophical",
+        "year": 1866,
+        "available": false,
+        "description": "A psychological exploration of guilt and redemption following a young man's crime.",
+        "cover_image": "https://i.pinimg.com/1200x/df/5f/11/df5f11cfbf6a6e8becd8eb72cc6fda96.jpg",
+        "rating": 4.8,
+        "units_sold": 20000000
+      },
+      {
+        "id": 13,
+        "title": "A Promised Land",
+        "author": "Barack Obama",
+        "genre": "Autobiography",
+        "year": 2020,
+        "available": true,
+        "description": "A memoir by Barack Obama, covering his early political career through key moments in his presidency.",
+        "cover_image": "https://m.media-amazon.com/images/I/91uwocAMtSL._AC_UF1000,1000_QL80_.jpg",
+        "rating": 4.6,
+        "units_sold": 3500000
+      },
+      {
+        "id": 14,
+        "title": "Think Like a Monk",
+        "author": "Jay Shetty",
+        "genre": "Self-help",
+        "year": 2020,
+        "available": true,
+        "description": "A self-help book that shares wisdom from Jay Shetty’s time as a monk, offering practical life lessons.",
+        "cover_image": "https://m.media-amazon.com/images/I/81s6DUyQCZL._AC_UF1000,1000_QL80_.jpg",
+        "rating": 4.7,
+        "units_sold": 5000000
+      }
+    ]
+  }
+  
