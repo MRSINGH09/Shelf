@@ -1,29 +1,32 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 import BookTile from "./BookTile";
 import { useGetAllBookQuery } from "../redux/api";
-import { findBook } from "../utils/booksUtility";
+import { findBook, getBookDataByMode } from "../utils/booksUtility";
 import NotFound from "./NotFound";
+import SearchBar from "./SearchBar";
 
 function BooksGallery() {
   const { data, isLoading } = useGetAllBookQuery([]);
   const searchValue = useSelector((state) => state.searchInputValue.value);
+  const mode = useSelector((state) => state.modeSlice.value);
   const [bookData, setBookData] = useState([]);
 
   useEffect(() => {
     if (!searchValue) {
-      setBookData(data);
+      setBookData(getBookDataByMode(data, mode));
     } else {
-      setBookData(findBook(data, searchValue));
+      setBookData(findBook(data, searchValue, mode));
     }
-  }, [data, searchValue]);
+  }, [data, searchValue, mode]);
 
   return isLoading ? (
     <div>...Loading</div>
   ) : (
     <>
+      {mode == "User" ? <SearchBar /> : ""}
       <Box
         sx={{
           padding: "2rem",
