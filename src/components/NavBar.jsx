@@ -81,7 +81,6 @@ export default function NavBar() {
           <Typography
             onClick={() =>{ navigate("/")
                 dispatch(setValue(""));
-                 
             }}
             variant="h6"
             noWrap

@@ -1,14 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import BookDetails from '../components/BookDetails'
-
+import BookDetails from "../components/BookDetails";
 
 function Description() {
-  
-    
-  return (
-    <BookDetails/>
-  )
+  return <BookDetails />;
 }
 
-export default Description
+export default Description;
