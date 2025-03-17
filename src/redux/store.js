@@ -8,7 +8,7 @@ export const store = configureStore({
   reducer: {
     [booksApi.reducerPath]: booksApi.reducer,
     searchInputValue: searchSlice.reducer,
-    modeSlice:modeSlice.reducer
+    modeSlice: modeSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(booksApi.middleware),

@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -58,8 +58,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function NavBar() {
   const dispatch = useDispatch();
-  const searchValue=useSelector((state)=>state.searchInputValue.value)
-  const mode= useSelector((state)=>state.modeSlice.value)
+  const searchValue = useSelector((state) => state.searchInputValue.value);
+  const mode = useSelector((state) => state.modeSlice.value);
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
@@ -80,8 +80,9 @@ export default function NavBar() {
             <MenuIcon />
           </IconButton>
           <Typography
-            onClick={() =>{ navigate(`/${mode.toLowerCase()}`)
-                dispatch(setValue(""));
+            onClick={() => {
+              navigate(`/${mode.toLowerCase()}`);
+              dispatch(setValue(""));
             }}
             variant="h6"
             noWrap
@@ -91,7 +92,7 @@ export default function NavBar() {
               display: { xs: "none", sm: "block" },
               display: "flex",
               alignItems: "center",
-              cursor:'pointer'
+              cursor: "pointer",
             }}
           >
             <AutoStoriesIcon sx={{ marginRight: "1rem" }} />
@@ -102,7 +103,7 @@ export default function NavBar() {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-                value={searchValue}
+              value={searchValue}
               onChange={(e) => {
                 dispatch(setValue(e.target.value));
               }}

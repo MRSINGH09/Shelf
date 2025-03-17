@@ -85,7 +85,7 @@
       "genre": "Adventure",
       "year": 1851,
       "available": false,
-      "is_borrowed": false,
+      "is_borrowed": true,
       "description": "A thrilling tale of obsession and revenge between a whaler and a giant white whale.",
       "cover_image": "https://i.pinimg.com/1200x/0c/5a/e2/0c5ae28af37b4b9988725ee72f946709.jpg",
       "rating": 4.2,

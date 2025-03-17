@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { useGetAllBookQuery } from "../redux/api";
 import { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
-
 import { getBookById } from "../utils/booksUtility";
 
 function BookDetails() {

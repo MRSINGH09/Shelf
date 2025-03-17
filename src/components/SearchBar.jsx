@@ -14,16 +14,15 @@ export default function SearchBar() {
 
   // Ensure data is available before mapping
   const bookList = data
-    ? data.reduce((acc,book) => {
-        if(!book.is_borrowed){
-        acc.push( {
+    ? data.reduce((acc, book) => {
+        if (!book.is_borrowed) {
+          acc.push({
             id: book.id,
-            title: book.title ,
-          }) 
+            title: book.title,
+          });
         }
-        return acc  
-    } 
-       ,[])
+        return acc;
+      }, [])
     : [];
 
   return (
@@ -45,7 +44,11 @@ export default function SearchBar() {
 
           // If no match, add a non-selectable "Not Found" option
           if (inputValue !== "" && !isExisting) {
-            filtered.push({ id: "not-found", title: "Not Found", isDisabled: true });
+            filtered.push({
+              id: "not-found",
+              title: "Not Found",
+              isDisabled: true,
+            });
           }
 
           return filtered;
@@ -55,29 +58,31 @@ export default function SearchBar() {
         handleHomeEndKeys
         id="add-book"
         options={bookList}
-        getOptionLabel={(option) => (option?.title ? option.title : "")} 
+        getOptionLabel={(option) => (option?.title ? option.title : "")}
         renderOption={(props, option) => (
           <li
             {...props}
             key={option.id}
-            style={option.isDisabled ? { color: "gray", pointerEvents: "none" } : {}}
+            style={
+              option.isDisabled ? { color: "gray", pointerEvents: "none" } : {}
+            }
           >
             {option.title}
           </li>
         )}
         sx={{ width: 300 }}
         freeSolo
-        renderInput={(params) => <TextField {...params} label="Search for a book" />}
+        renderInput={(params) => (
+          <TextField {...params} label="Search for a book" />
+        )}
       />
       <Button
-        onClick={async() =>{
-            const updatedBook=UpdateBookField(data, value.title,true)
-            const {id}=updatedBook
-            await updateBook({id,updatedData:updatedBook,})
-            setValue(null)
-        }
-            
-        }
+        onClick={async () => {
+          const updatedBook = UpdateBookField(data, value.title, true);
+          const { id } = updatedBook;
+          await updateBook({ id, updatedData: updatedBook });
+          setValue(null);
+        }}
         variant="contained"
         sx={{ marginLeft: "2rem" }}
         disabled={!value || value.title === "Not Found"}

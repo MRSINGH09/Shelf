@@ -56,7 +56,7 @@ export default function DrawerComponent({ open, setOpen }) {
           </ListItem>
         ))}
       </List>
-      {isAuthenticated?
+      {isAuthenticated && mode==='User'?
       <>
       <Divider/>
       <List>
