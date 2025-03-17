@@ -59,6 +59,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function NavBar() {
   const dispatch = useDispatch();
   const searchValue=useSelector((state)=>state.searchInputValue.value)
+  const mode= useSelector((state)=>state.modeSlice.value)
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
@@ -79,7 +80,7 @@ export default function NavBar() {
             <MenuIcon />
           </IconButton>
           <Typography
-            onClick={() =>{ navigate("/")
+            onClick={() =>{ navigate(`/${mode.toLowerCase()}`)
                 dispatch(setValue(""));
             }}
             variant="h6"

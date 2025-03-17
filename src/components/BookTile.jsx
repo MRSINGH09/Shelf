@@ -11,11 +11,11 @@ import Options from "./Options";
 export default function MediaCard({ title, url, genre, id }) {
   const navigate = useNavigate();
   const mode = useSelector((state) => state.modeSlice.value);
-  const searchValue=useSelector((state)=>state.searchInputValue.value)
+  const searchValue = useSelector((state) => state.searchInputValue.value);
   return (
     <Card
       onClick={() => {
-        navigate(`/description/${id}`);
+        navigate(`/${mode.toLowerCase()}/description/${id}`);
       }}
       sx={{
         position: "relative",
@@ -56,7 +56,7 @@ export default function MediaCard({ title, url, genre, id }) {
             {title}
           </Typography>
         </Box>
-        {mode === "User" && !searchValue  ? <Options title={title} /> : ""}
+        {mode === "User" && !searchValue ? <Options title={title} /> : ""}
       </Box>
     </Card>
   );

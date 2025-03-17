@@ -9,13 +9,16 @@ import ListItemText from "@mui/material/ListItemText";
 import { Typography } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
+import LogoutIcon from '@mui/icons-material/Logout';
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import { changeMode } from "../redux/slices/modeSlice";
 
 export default function DrawerComponent({ open, setOpen }) {
   const mode = useSelector((state) => state.modeSlice.value);
   const dispatch = useDispatch();
+  const navigate=useNavigate()
 
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={() => setOpen(false)}>
@@ -36,7 +39,9 @@ export default function DrawerComponent({ open, setOpen }) {
       <List>
         {["User", "Admin"].map((text) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton onClick={() => dispatch(changeMode(text))}>
+            <ListItemButton onClick={() => {dispatch(changeMode(text))
+                    navigate(`/${text.toLowerCase()}`)
+            }}>
               <ListItemIcon>
                 {text == "Admin" ? (
                   <AdminPanelSettingsIcon />
