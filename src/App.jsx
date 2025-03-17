@@ -1,10 +1,7 @@
-import Navbar from "./components/NavBar";
-import BooksGallery from "./components/BooksGallery";
 import HomePage from "./pages/HomePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "./layout/MainLayout";
 import Description from "./pages/Description";
-import SignInPage from "./pages/SignInPage";
 import CredentialsSignInPage from "./pages/SignInPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AuthProvider from "./context/AuthContext";
