@@ -14,11 +14,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import { changeMode } from "../redux/slices/modeSlice";
+import { useAuth } from "../context/AuthContext";
 
 export default function DrawerComponent({ open, setOpen }) {
   const mode = useSelector((state) => state.modeSlice.value);
   const dispatch = useDispatch();
   const navigate=useNavigate()
+  const {isAuthenticated,setIsAuthenticated}=useAuth()
 
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={() => setOpen(false)}>
@@ -54,6 +56,25 @@ export default function DrawerComponent({ open, setOpen }) {
           </ListItem>
         ))}
       </List>
+      {isAuthenticated?
+      <>
+      <Divider/>
+      <List>
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => {
+              setIsAuthenticated(false)
+              localStorage.removeItem('isAuthenticated')      
+            }}>
+              <ListItemIcon>
+                  <LogoutIcon />
+              </ListItemIcon>
+              <ListItemText primary={'SignOut'} />
+            </ListItemButton>
+          </ListItem>
+      </List>
+      </>:""}
+      
+
     </Box>
   );
 

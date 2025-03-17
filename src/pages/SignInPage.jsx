@@ -30,6 +30,7 @@ export default function CredentialsSignInPage() {
   const signIn = (provider, formData) => {
     if (email === "user@gmail.com" && password === "12345678") {
       setIsAuthenticated(true);
+      localStorage.setItem('isAuthenticated','true')
       navigate("/user");
     } else {
       setError("Invalid email or password");

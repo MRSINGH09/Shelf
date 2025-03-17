@@ -59,7 +59,7 @@
       "genre": "Fantasy",
       "year": 1937,
       "available": false,
-      "is_borrowed": false,
+      "is_borrowed": true,
       "description": "A classic fantasy adventure of Bilbo Baggins on his quest to reclaim treasure from a dragon.",
       "cover_image": "https://m.media-amazon.com/images/I/91b0C2YNSrL._AC_UF1000,1000_QL80_.jpg",
       "rating": 4.9,
