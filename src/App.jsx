@@ -1,10 +1,11 @@
 import HomePage from "./pages/HomePage";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import MainLayout from "./layout/MainLayout";
 import Description from "./pages/Description";
 import CredentialsSignInPage from "./pages/SignInPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AuthProvider from "./context/AuthContext";
+import Error from "./pages/Error404";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,14 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path:'/',
+    element:<Navigate  to={'/admin'}/>
+  },
+  {
+    path:'*',
+    element:<Error/>
+  }
 ]);
 
 function App() {
